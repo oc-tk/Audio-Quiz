@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PAUM.Views.Page1">
+    <ContentPage.Content>
+        <BoxView>
+            <BoxView.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwipedLeft"/>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwipedRight"/>
+                <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipedDown"/>
+                <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipedUp"/>
+            </BoxView.GestureRecognizers>
+        </BoxView>
+    </ContentPage.Content>
+</ContentPage>

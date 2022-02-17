@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PAUM"
+             x:Class="PAUM.MainPage">
+
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ilość poziomów trudności:" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+
+                <Picker x:Name="ListDiff" Grid.Column="1" HorizontalTextAlignment="End"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Button Text="Wybierz dźwięki" Clicked="ButtonClickedAudio"/>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Lista plików muzycznych:" HorizontalTextAlignment="Center"/>
+
+                <ListView x:Name="ListAudio" Grid.Row="1"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Długość przerwy (sek):" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+
+            <Picker x:Name="ListInterval" Grid.Column="1" HorizontalTextAlignment="End"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Czas do zastanowienia (sek):" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+
+            <Picker x:Name="ListToThink" Grid.Column="1" HorizontalTextAlignment="End"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Ilość żyć:" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+
+            <Picker x:Name="ListLive" Grid.Column="1" HorizontalTextAlignment="End"/>
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Ilość popr. odpowiedzi do awansu:" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+
+            <Picker x:Name="ListCorrect" Grid.Column="1" HorizontalTextAlignment="End"/>
+        </Grid>
+
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Resetuj poprawne odpowiedzi:" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+
+            <CheckBox x:Name="CheckPoprawnosc" Grid.Column="2"/>
+        </Grid>
+
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Jak grać" Clicked="ButtonHowToPlayClicked"/>
+
+            <Button Text="Uruchom grę" Clicked="ButtonClicked" Grid.Column="1"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>
